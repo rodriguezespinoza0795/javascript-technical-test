@@ -6,18 +6,18 @@ export default function Practical2 () {
     const [value, setValue] = useState(0);
     const [array, setArray] = useState([]);
 
-    const handleOnChange = (e)=> {
+    const handleOnChange = (e:any)=> {
         setValue(e.target.value)
     }
 
-    const generate = (e)=> {
+    const generate = ()=> {
         if ( value > 0) {
             var numbers = new Array();
             for (var i = 0; i < value; i++) {            
                 var val = Math.round(Math.random()*10)+1;
                 numbers.push(val);
             }
-            setArray(numbers)
+            setArray(numbers as never)
         }
     }
 

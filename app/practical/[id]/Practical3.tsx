@@ -5,13 +5,13 @@ import { useState } from "react";
 export default function Practical3 () {
     const [coordinates, setCoordinates] = useState([]);
 
-    const generate = (e)=> {
+    const generate = (e:any)=> {
         var cord = new Array();
         for (var i = 0; i < 4; i++) {            
             var val = Math.floor(Math.random()*10);
             cord.push(val);
         }
-        setCoordinates(cord)
+        setCoordinates(cord as never)
     }
 
     return (

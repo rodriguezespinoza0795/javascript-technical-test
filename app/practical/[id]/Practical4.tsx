@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Practical4 () {
     const [array, setArray] = useState([]);
 
-    const generate = (e)=> {
+    const generate = (e:any)=> {
         var invoice = new Array();
         for (var i = 0; i < Math.floor(Math.random()*10)+1; i++) { 
                  
@@ -18,7 +18,7 @@ export default function Practical4 () {
                 }
             ));
         }
-        setArray(invoice)
+        setArray(invoice as never)
     }
 
     return (
@@ -51,7 +51,7 @@ export default function Practical4 () {
                 {
                     array.length > 0 &&
                         array.map(item => (
-                            <Typography variant="subtitle2" color={"black"}>
+                            <Typography variant="subtitle2" color={"black"} key={item}>
                                 {item}
                             </Typography>
                         ))

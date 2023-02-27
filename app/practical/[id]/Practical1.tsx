@@ -6,13 +6,13 @@ export default function Practical1 () {
     const [value, setValue] = useState(0);
     const [matriz, setMatriz] = useState([]);
 
-    const handleOnChange = (e)=> {
+    const handleOnChange = (e:any)=> {
         setValue(e.target.value)
     }
 
-    const calculate = (e)=> {
+    const calculate = ()=> {
         if ( value > 0) {
-            setMatriz([value]);
+            setMatriz([value as never]);
         }
     }
 
